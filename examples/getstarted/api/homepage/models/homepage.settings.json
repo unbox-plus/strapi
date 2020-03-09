@@ -16,6 +16,12 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "Background": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }

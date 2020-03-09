@@ -4,25 +4,29 @@ import { get } from 'lodash';
 import { Modal, ModalFooter, useGlobalContext, request } from 'strapi-helper-plugin';
 import { Button } from '@buffetjs/core';
 import pluginId from '../../pluginId';
-import ModalHeader from '../../components/ModalHeader';
+import ModalHeader from '../ModalHeader';
 import stepper from './utils/stepper';
 import init from './init';
 import reducer, { initialState } from './reducer';
-import { getTrad } from '../../utils';
+import getTrad from '../../utils/getTrad';
+import useDataManager from '../../hooks/useDataManager';
 
 const ModalStepper = ({ isOpen, onToggle }) => {
   const { formatMessage } = useGlobalContext();
+  const { currentStep, goTo, handleClose } = useDataManager();
   const [reducerState, dispatch] = useReducer(reducer, initialState, init);
-  const { currentStep, fileToEdit, filesToUpload } = reducerState.toJS();
-  const { Component, headers, next, prev, withBackButton } = stepper[currentStep];
+  const { fileToEdit, filesToUpload } = reducerState.toJS();
+  const { Component, headerBreadcrumbs, next, prev, withBackButton, HeaderComponent } = stepper[
+    currentStep
+  ];
   const filesToUploadLength = filesToUpload.length;
   const toggleRef = useRef();
   toggleRef.current = onToggle;
 
   useEffect(() => {
     if (currentStep === 'upload' && filesToUploadLength === 0) {
-      // Passing true to the onToggle prop will refetch the data when the modal closes
-      toggleRef.current(true);
+      // Close modal when file uploading is over
+      toggleRef.current();
     }
   }, [filesToUploadLength, currentStep]);
 
@@ -70,12 +74,6 @@ const ModalStepper = ({ isOpen, onToggle }) => {
     }
   };
 
-  const handleClosed = () => {
-    dispatch({
-      type: 'RESET_PROPS',
-    });
-  };
-
   const handleGoToEditNewFile = fileIndex => {
     dispatch({
       type: 'SET_FILE_TO_EDIT',
@@ -102,10 +100,10 @@ const ModalStepper = ({ isOpen, onToggle }) => {
 
   const handleSubmitEditNewFile = e => {
     e.preventDefault();
-
-    dispatch({
-      type: 'ON_SUBMIT_EDIT_NEW_FILE',
-    });
+    console.log(e);
+    // dispatch({
+    //   type: 'ON_SUBMIT_EDIT_NEW_FILE',
+    // });
 
     goNext();
   };
@@ -187,17 +185,15 @@ const ModalStepper = ({ isOpen, onToggle }) => {
     goTo(next);
   };
 
-  const goTo = to => {
-    dispatch({
-      type: 'GO_TO',
-      to,
-    });
-  };
-
   return (
-    <Modal isOpen={isOpen} onToggle={handleToggle} onClosed={handleClosed}>
+    <Modal isOpen={isOpen} onToggle={handleToggle} onClosed={handleClose}>
       {/* header title */}
-      <ModalHeader goBack={goBack} headers={headers} withBackButton={withBackButton} />
+      <ModalHeader
+        goBack={goBack}
+        HeaderComponent={HeaderComponent}
+        headerBreadcrumbs={headerBreadcrumbs}
+        withBackButton={withBackButton}
+      />
       {/* body of the modal */}
       {Component && (
         <Component
@@ -235,11 +231,10 @@ const ModalStepper = ({ isOpen, onToggle }) => {
               )}
             </Button>
           )}
-          {currentStep === 'edit-new' && (
-            <Button color="success" type="button" onClick={handleSubmitEditNewFile}>
-              {formatMessage({ id: 'form.button.finish' })}
-            </Button>
-          )}
+
+          <Button color="success" type="button" onClick={handleSubmitEditNewFile}>
+            {formatMessage({ id: 'form.button.finish' })}
+          </Button>
         </section>
       </ModalFooter>
     </Modal>

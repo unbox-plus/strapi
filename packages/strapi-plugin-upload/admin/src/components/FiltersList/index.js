@@ -18,6 +18,14 @@ const FiltersList = ({ filters, onClick }) => {
       };
     }
 
+    if (value === 'application') {
+      displayedValue = {
+        ...filter,
+        filter: '=',
+        value: 'file',
+      };
+    }
+
     return (
       <FilterButton
         onClick={() => onClick(index)}

@@ -47,6 +47,29 @@ const FiltersCard = ({ onChange }) => {
     ));
   };
 
+  const renderValuesOptions = () => {
+    const options = [
+      {
+        id: 'image',
+        value: 'image',
+      },
+      {
+        id: 'video',
+        value: 'video',
+      },
+      {
+        id: 'files',
+        value: 'application',
+      },
+    ];
+
+    return options.map(({ id, value }) => (
+      <FormattedMessage id={getTrad(`type.${id}`)} key={id}>
+        {msg => <option value={value}>{msg}</option>}
+      </FormattedMessage>
+    ));
+  };
+
   return (
     <Wrapper>
       <InputWrapper>
@@ -65,7 +88,7 @@ const FiltersCard = ({ onChange }) => {
           type={type}
           onChange={handleChange}
           name="value"
-          options={['image', 'video', 'files']}
+          options={renderValuesOptions()}
           value={value}
         />
       </InputWrapper>

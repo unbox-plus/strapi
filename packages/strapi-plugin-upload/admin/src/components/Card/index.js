@@ -4,10 +4,15 @@ import PropTypes from 'prop-types';
 import Text from '../Text';
 import CardImgWrapper from '../CardImgWrapper';
 import CardPreview from '../CardPreview';
+import Tag from '../Tag';
 import Wrapper from './Wrapper';
+import TitleWrapper from './TitleWrapper';
 import Title from './Title';
 import ErrorMessage from './ErrorMessage';
 import Border from './Border';
+
+import formatBytes from '../../utils/formatBytes';
+import useMediaTypes from '../../hooks/useMediaTypes';
 
 const Card = ({
   checked,
@@ -21,6 +26,35 @@ const Card = ({
   type,
   url,
 }) => {
+  const {
+    mediaTypes: { mimeTypes },
+  } = useMediaTypes();
+  console.log('card', size, mimeTypes, mime, type);
+
+  const getType = () => {
+    return mime || type;
+  };
+
+  const getSize = () => {
+    return formatBytes(size, 0);
+  };
+
+  const getKind = () => {
+    const kind = getType().split('/')[0];
+
+    if (kind === 'application') {
+      return 'file';
+    }
+
+    return kind;
+  };
+
+  const getExtension = () => {
+    return getType()
+      .split('/')[1]
+      .toUpperCase();
+  };
+
   return (
     <Wrapper>
       <CardImgWrapper checked={checked} small={small}>
@@ -28,10 +62,13 @@ const Card = ({
         <Border color={hasError ? 'orange' : 'mediumBlue'} shown={checked || hasError} />
         {children}
       </CardImgWrapper>
-      <Title fontSize="md" fontWeight="bold" ellipsis>
-        {name}
-      </Title>
-      <Text color="grey" fontSize="xs" ellipsis>{`${type} - ${size}`}</Text>
+      <TitleWrapper>
+        <Title fontSize="md" fontWeight="bold" ellipsis>
+          {name}
+        </Title>
+        <Tag label={getKind()} />
+      </TitleWrapper>
+      <Text color="grey" fontSize="xs" ellipsis>{`${getExtension()} - ${getSize()}`}</Text>
       {hasError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </Wrapper>
   );

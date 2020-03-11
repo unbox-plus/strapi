@@ -23,6 +23,7 @@ import Filters from '../../components/Filters';
 import List from '../../components/List';
 import ListEmpty from '../../components/ListEmpty';
 import ModalStepper from '../ModalStepper';
+import MediaTypesProvider from '../MediaTypesProvider';
 import { generatePageFromStart, generateStartFromPage, getHeaderLabel } from './utils';
 import init from './init';
 import reducer, { initialState } from './reducer';
@@ -36,7 +37,7 @@ const HomePage = () => {
   const { push } = useHistory();
   const { search } = useLocation();
 
-  const { data, dataToDelete } = reducerState.toJS();
+  const { data, dataToDelete, mediaTypes } = reducerState.toJS();
   const pluginName = formatMessage({ id: getTrad('plugin.name') });
   const paramsKeys = ['_limit', '_start', '_q', '_sort'];
   const debouncedSearch = useDebounce(searchValue, 300);
@@ -47,9 +48,30 @@ const HomePage = () => {
   }, [debouncedSearch]);
 
   useEffect(() => {
+    fetchMediaTypes();
+  }, []);
+
+  useEffect(() => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
+
+  const fetchMediaTypes = async () => {
+    const requestURL = getRequestUrl('media-types');
+
+    try {
+      const { data } = await request(requestURL, {
+        method: 'GET',
+      });
+
+      dispatch({
+        type: 'GET_MEDIA_TYPES_SUCCEEDED',
+        data,
+      });
+    } catch (err) {
+      strapi.notification.error('notification.error');
+    }
+  };
 
   const fetchData = async () => {
     const requestURL = getRequestUrl('files');
@@ -178,35 +200,37 @@ const HomePage = () => {
   };
 
   return (
-    <Container>
-      <Header {...headerProps} />
-      <HeaderSearch
-        label={pluginName}
-        onChange={handleChangeSearchValue}
-        onClear={handleClearSearch}
-        placeholder={formatMessage({ id: getTrad('search.placeholder') })}
-        name="_q"
-        value={searchValue}
-      />
-      <ControlsWrapper>
-        <SelectAll />
-        <SortPicker onChange={handleChangeParams} value={query.get('_sort') || null} />
-        <Filters
-          onChange={handleChangeParams}
-          filters={generateFiltersFromSearch(search)}
-          onClick={handleDeleteFilter}
+    <MediaTypesProvider mediaTypes={mediaTypes}>
+      <Container>
+        <Header {...headerProps} />
+        <HeaderSearch
+          label={pluginName}
+          onChange={handleChangeSearchValue}
+          onClear={handleClearSearch}
+          placeholder={formatMessage({ id: getTrad('search.placeholder') })}
+          name="_q"
+          value={searchValue}
         />
-      </ControlsWrapper>
-      <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
-      <ListEmpty onClick={() => handleClickToggleModal()} />
-      <PageFooter
-        context={{ emitEvent: () => {} }}
-        count={50}
-        onChangeParams={handleChangeListParams}
-        params={params}
-      />
-      <ModalStepper isOpen={isOpen} onToggle={handleClickToggleModal} />
-    </Container>
+        <ControlsWrapper>
+          <SelectAll />
+          <SortPicker onChange={handleChangeParams} value={query.get('_sort') || null} />
+          <Filters
+            onChange={handleChangeParams}
+            filters={generateFiltersFromSearch(search)}
+            onClick={handleDeleteFilter}
+          />
+        </ControlsWrapper>
+        <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
+        <ListEmpty onClick={() => handleClickToggleModal()} />
+        <PageFooter
+          context={{ emitEvent: () => {} }}
+          count={50}
+          onChangeParams={handleChangeListParams}
+          params={params}
+        />
+        <ModalStepper isOpen={isOpen} onToggle={handleClickToggleModal} />
+      </Container>
+    </MediaTypesProvider>
   );
 };
 

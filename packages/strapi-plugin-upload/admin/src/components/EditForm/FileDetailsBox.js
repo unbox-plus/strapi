@@ -4,7 +4,7 @@ import { get } from 'lodash';
 import Flex from '../Flex';
 import Text from '../Text';
 import FileDetailsBoxWrapper from './FileDetailsBoxWrapper';
-import formatBytes from './utils/formatBytes';
+import formatBytes from '../../utils/formatBytes';
 
 const FileDetailsBox = ({ file }) => {
   const sections = [
@@ -44,11 +44,7 @@ const FileDetailsBox = ({ file }) => {
             {rows.map(rowItem => {
               return (
                 <Text as="div" key={rowItem.label} style={{ width: '50%' }}>
-                  <Text
-                    color="grey"
-                    fontWeight="bold"
-                    textTransform="capitalize"
-                  >
+                  <Text color="grey" fontWeight="bold" textTransform="capitalize">
                     {rowItem.label}
                   </Text>
                   <Text color="grey">{rowItem.value}</Text>

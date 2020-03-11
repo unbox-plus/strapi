@@ -6,6 +6,7 @@ const Title = styled(props => <Text {...props} color="black" />)`
   width: 100%;
   margin-bottom: 4px;
   margin-top: 4px;
+  padding-right: 3px;
 `;
 
 export default Title;

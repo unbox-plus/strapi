@@ -37,10 +37,15 @@ const HomePage = () => {
   const { push } = useHistory();
   const { search } = useLocation();
 
-  const { data, dataToDelete, mediaTypes } = reducerState.toJS();
+  const { data, dataCount, dataToDelete, mediaTypes } = reducerState.toJS();
   const pluginName = formatMessage({ id: getTrad('plugin.name') });
   const paramsKeys = ['_limit', '_start', '_q', '_sort'];
   const debouncedSearch = useDebounce(searchValue, 300);
+
+  useEffect(() => {
+    fetchMediaTypes();
+    fetchDataCount();
+  }, []);
 
   useEffect(() => {
     handleChangeParams({ target: { name: '_q', value: searchValue } });
@@ -48,25 +53,21 @@ const HomePage = () => {
   }, [debouncedSearch]);
 
   useEffect(() => {
-    fetchMediaTypes();
-  }, []);
-
-  useEffect(() => {
     fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
-  const fetchMediaTypes = async () => {
-    const requestURL = getRequestUrl('media-types');
+  const fetchDataCount = async () => {
+    const requestURL = getRequestUrl('files/count');
 
     try {
-      const { data } = await request(requestURL, {
+      const { count } = await request(requestURL, {
         method: 'GET',
       });
 
       dispatch({
-        type: 'GET_MEDIA_TYPES_SUCCEEDED',
-        data,
+        type: 'GET_DATA_COUNT_SUCCEEDED',
+        count,
       });
     } catch (err) {
       strapi.notification.error('notification.error');
@@ -83,6 +84,23 @@ const HomePage = () => {
 
       dispatch({
         type: 'GET_DATA_SUCCEEDED',
+        data,
+      });
+    } catch (err) {
+      strapi.notification.error('notification.error');
+    }
+  };
+
+  const fetchMediaTypes = async () => {
+    const requestURL = getRequestUrl('media-types');
+
+    try {
+      const { data } = await request(requestURL, {
+        method: 'GET',
+      });
+
+      dispatch({
+        type: 'GET_MEDIA_TYPES_SUCCEEDED',
         data,
       });
     } catch (err) {
@@ -148,6 +166,7 @@ const HomePage = () => {
 
     if (refetch) {
       fetchData();
+      fetchDataCount();
     }
   };
 
@@ -220,14 +239,21 @@ const HomePage = () => {
             onClick={handleDeleteFilter}
           />
         </ControlsWrapper>
-        <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
-        <ListEmpty onClick={() => handleClickToggleModal()} />
-        <PageFooter
-          context={{ emitEvent: () => {} }}
-          count={50}
-          onChangeParams={handleChangeListParams}
-          params={params}
-        />
+
+        {dataCount > 0 ? (
+          <>
+            <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
+            <PageFooter
+              context={{ emitEvent: () => {} }}
+              count={dataCount}
+              onChangeParams={handleChangeListParams}
+              params={params}
+            />
+          </>
+        ) : (
+          <ListEmpty onClick={() => handleClickToggleModal()} />
+        )}
+
         <ModalStepper isOpen={isOpen} onToggle={handleClickToggleModal} />
       </Container>
     </MediaTypesProvider>

@@ -32,6 +32,7 @@ const HomePage = () => {
   const [reducerState, dispatch] = useReducer(reducer, initialState, init);
   const query = useQuery();
   const [isOpen, setIsOpen] = useState(false);
+  const [count, setCount] = useState(0);
   const [searchValue, setSearchValue] = useState(query.get('_q') || '');
   const { push } = useHistory();
   const { search } = useLocation();
@@ -50,10 +51,12 @@ const HomePage = () => {
   useEffect(() => {
     isMounted.current = true;
     fetchData();
+    fetchDataCount();
 
     return () => {
       isMounted.current = false;
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
@@ -80,15 +83,14 @@ const HomePage = () => {
       });
 
       if (isMounted.current) {
+        setCount(data.length);
         dispatch({
           type: 'GET_DATA_SUCCEEDED',
           data,
         });
       }
     } catch (err) {
-      if (isMounted.current) {
-        strapi.notification.error('notification.error');
-      }
+      strapi.notification.error('notification.error');
     }
   };
 
@@ -184,7 +186,7 @@ const HomePage = () => {
         id: getTrad(getHeaderLabel(data)),
       },
       // Values
-      { number: 1 }
+      { number: dataCount }
     ),
     actions: [
       {
@@ -216,6 +218,8 @@ const HomePage = () => {
   const areAllCheckboxesSelected = data.length === dataToDelete.length;
   const hasSomeCheckboxSelected = dataToDelete.length > 0;
 
+  const paginationCount = count < limit ? count : dataCount;
+
   return (
     <Container>
       <Header {...headerProps} />
@@ -240,14 +244,19 @@ const HomePage = () => {
           onClick={handleDeleteFilter}
         />
       </ControlsWrapper>
-      <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
-      <ListEmpty onClick={() => handleClickToggleModal()} />
-      <PageFooter
-        context={{ emitEvent: () => {} }}
-        count={50}
-        onChangeParams={handleChangeListParams}
-        params={params}
-      />
+      {dataCount > 0 ? (
+        <>
+          <List data={data} onChange={handleChangeCheck} selectedItems={dataToDelete} />
+          <PageFooter
+            context={{ emitEvent: () => {} }}
+            count={paginationCount}
+            onChangeParams={handleChangeListParams}
+            params={params}
+          />
+        </>
+      ) : (
+        <ListEmpty onClick={() => handleClickToggleModal()} />
+      )}
       <ModalStepper isOpen={isOpen} onToggle={handleClickToggleModal} />
     </Container>
   );

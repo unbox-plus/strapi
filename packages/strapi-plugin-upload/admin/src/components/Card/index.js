@@ -8,8 +8,34 @@ import CardPreview from '../CardPreview';
 import Wrapper from './Wrapper';
 import Title from './Title';
 
+import formatBytes from '../../utils/formatBytes';
+
 // TODO - adapt with the real data
 const Card = ({ checked, id, name, size, small, type, onChange, url }) => {
+  const getType = () => {
+    return mime || type;
+  };
+
+  const getSize = () => {
+    return formatBytes(size, 0);
+  };
+
+  const getKind = () => {
+    const kind = getType().split('/')[0];
+
+    if (kind !== 'image' && kind !== 'video') {
+      return 'file';
+    }
+
+    return kind;
+  };
+
+  const getExtension = () => {
+    return getType()
+      .split('/')[1]
+      .toUpperCase();
+  };
+
   return (
     <Wrapper>
       <div>

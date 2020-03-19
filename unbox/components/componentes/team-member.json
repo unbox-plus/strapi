@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_team_members",
+  "info": {
+    "name": "TeamMember",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

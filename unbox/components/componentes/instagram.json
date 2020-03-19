@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_instagrams",
+  "info": {
+    "name": "Instagram Media",
+    "icon": "crow"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

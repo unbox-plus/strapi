@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "components_blablateste_banners",
+  "info": {
+    "name": "Banner",
+    "icon": "columns"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

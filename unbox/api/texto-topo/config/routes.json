@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/texto-topos",
+      "handler": "texto-topo.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/texto-topos/count",
+      "handler": "texto-topo.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/texto-topos/:id",
+      "handler": "texto-topo.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/texto-topos",
+      "handler": "texto-topo.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/texto-topos/:id",
+      "handler": "texto-topo.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/texto-topos/:id",
+      "handler": "texto-topo.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

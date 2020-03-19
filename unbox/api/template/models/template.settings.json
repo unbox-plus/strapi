@@ -1,0 +1,101 @@
+{
+  "connection": "default",
+  "collectionName": "templates",
+  "info": {
+    "name": "template"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "footer": {
+      "model": "footer-information"
+    },
+    "logo": {
+      "model": "logo"
+    },
+    "texto_topo": {
+      "model": "texto-topo"
+    },
+    "name": {
+      "type": "string"
+    },
+    "shopId": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "header_link": {
+      "model": "header-links"
+    },
+    "carousel_top": {
+      "model": "carousel-top"
+    },
+    "carousel_products": {
+      "model": "carousel-products"
+    },
+    "buy_button": {
+      "model": "buy-button"
+    },
+    "instagram_section": {
+      "model": "instagram-section"
+    },
+    "categories_section": {
+      "model": "categories-section"
+    },
+    "featured_product": {
+      "model": "featured-product"
+    },
+    "feedbacks_section": {
+      "model": "feedbacks"
+    },
+    "primaryColor": {
+      "type": "string"
+    },
+    "secondaryColor": {
+      "type": "string"
+    },
+    "about_page": {
+      "model": "about-page"
+    },
+    "terms_page": {
+      "model": "terms-page"
+    },
+    "TextoTopo": {
+      "type": "boolean",
+      "default": true
+    },
+    "CarouselBanner": {
+      "type": "boolean",
+      "default": true
+    },
+    "InstagramSection": {
+      "type": "boolean",
+      "default": true
+    },
+    "CategoriesSection": {
+      "type": "boolean",
+      "default": true
+    },
+    "FeaturedProduct": {
+      "type": "boolean",
+      "default": true
+    },
+    "FeedbacksSection": {
+      "type": "boolean",
+      "default": true
+    },
+    "AboutPage": {
+      "type": "boolean",
+      "default": true
+    },
+    "BrandPage": {
+      "type": "boolean",
+      "default": true
+    },
+    "shopName": {
+      "type": "string"
+    }
+  }
+}

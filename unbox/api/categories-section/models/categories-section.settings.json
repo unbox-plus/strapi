@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "categories_sections",
+  "info": {
+    "name": "Categories Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.category"
+    }
+  }
+}

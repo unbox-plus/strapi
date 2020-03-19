@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/buy-buttons",
+      "handler": "buy-button.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buy-buttons/count",
+      "handler": "buy-button.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/buy-buttons/:id",
+      "handler": "buy-button.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/buy-buttons",
+      "handler": "buy-button.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/buy-buttons/:id",
+      "handler": "buy-button.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/buy-buttons/:id",
+      "handler": "buy-button.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

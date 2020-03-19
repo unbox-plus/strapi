@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "about_pages",
+  "info": {
+    "name": "AboutPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "TeamMember": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.team-member"
+    },
+    "mission": {
+      "type": "text"
+    },
+    "vision": {
+      "type": "text"
+    },
+    "virtue": {
+      "type": "text"
+    },
+    "shopName": {
+      "type": "string"
+    }
+  }
+}

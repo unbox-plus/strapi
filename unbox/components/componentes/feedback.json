@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_feedbacks",
+  "info": {
+    "name": "Feedback",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "username": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

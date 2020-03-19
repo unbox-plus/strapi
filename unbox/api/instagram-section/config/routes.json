@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/instagram-sections",
+      "handler": "instagram-section.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/instagram-sections/count",
+      "handler": "instagram-section.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/instagram-sections/:id",
+      "handler": "instagram-section.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/instagram-sections",
+      "handler": "instagram-section.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/instagram-sections/:id",
+      "handler": "instagram-section.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/instagram-sections/:id",
+      "handler": "instagram-section.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

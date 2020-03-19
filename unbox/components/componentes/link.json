@@ -1,0 +1,17 @@
+{
+  "info": {
+    "name": "Link",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_componentes_links"
+}

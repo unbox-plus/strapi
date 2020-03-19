@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "buy_buttons",
+  "info": {
+    "name": "BuyButton"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "backgroundHoverColor": {
+      "type": "string"
+    },
+    "fontColor": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string"
+    }
+  }
+}

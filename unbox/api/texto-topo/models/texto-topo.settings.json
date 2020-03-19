@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "texto_topos",
+  "info": {
+    "name": "Texto Topo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "backgroundColor": {
+      "type": "string"
+    },
+    "fontColor": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "shop": {
+      "model": "shop",
+      "via": "texto_topo"
+    },
+    "shopName": {
+      "type": "string"
+    }
+  }
+}

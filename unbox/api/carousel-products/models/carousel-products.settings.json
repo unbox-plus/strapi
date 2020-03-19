@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "carousel_products",
+  "info": {
+    "name": "CarouselProducts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "shopName": {
+      "type": "string"
+    }
+  }
+}

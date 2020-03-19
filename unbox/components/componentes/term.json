@@ -1,0 +1,17 @@
+{
+  "info": {
+    "name": "term",
+    "icon": "handshake"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_componentes_terms"
+}

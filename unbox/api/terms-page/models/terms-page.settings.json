@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "terms_pages",
+  "info": {
+    "name": "TermsPage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "term": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.term"
+    },
+    "shopName": {
+      "type": "string"
+    }
+  }
+}

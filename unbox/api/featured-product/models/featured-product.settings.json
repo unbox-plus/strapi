@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "featured_products",
+  "info": {
+    "name": "featuredProduct"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "path": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "instagram_sections",
+  "info": {
+    "name": "Instagram Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.instagram"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

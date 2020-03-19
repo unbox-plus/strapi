@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "feedbacks-section",
+  "info": {
+    "name": "Feedbacks Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "feedbacks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.feedback"
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "featured_products",
+  "collectionName": "favicons",
   "info": {
-    "name": "featuredProduct"
+    "name": "Favicon"
   },
   "options": {
     "increments": true,
@@ -13,20 +13,23 @@
     "shopName": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "richtext"
-    },
-    "image": {
+    "favicon": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
     },
-    "path": {
-      "type": "string"
+    "favicon16": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "favicon32": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
     }
   }
 }

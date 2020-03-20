@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "templates",
   "info": {
@@ -96,6 +97,9 @@
     },
     "shopName": {
       "type": "string"
+    },
+    "favicon": {
+      "model": "favicon"
     }
   }
 }

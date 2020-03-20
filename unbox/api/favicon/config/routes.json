@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/favicons",
+      "handler": "favicon.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/favicons/count",
+      "handler": "favicon.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/favicons/:id",
+      "handler": "favicon.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/favicons",
+      "handler": "favicon.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/favicons/:id",
+      "handler": "favicon.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/favicons/:id",
+      "handler": "favicon.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

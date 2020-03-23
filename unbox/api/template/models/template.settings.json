@@ -63,35 +63,35 @@
     "terms_page": {
       "model": "terms-page"
     },
-    "TextoTopo": {
+    "ShowTextoTopo": {
       "type": "boolean",
       "default": true
     },
-    "CarouselBanner": {
+    "ShowCarouselBanner": {
       "type": "boolean",
       "default": true
     },
-    "InstagramSection": {
+    "ShowInstagramSection": {
       "type": "boolean",
       "default": true
     },
-    "CategoriesSection": {
+    "ShowCategoriesSection": {
       "type": "boolean",
       "default": true
     },
-    "FeaturedProduct": {
+    "ShowFeaturedProduct": {
       "type": "boolean",
       "default": true
     },
-    "FeedbacksSection": {
+    "ShowFeedbacksSection": {
       "type": "boolean",
       "default": true
     },
-    "AboutPage": {
+    "ShowAboutPage": {
       "type": "boolean",
       "default": true
     },
-    "BrandPage": {
+    "ShowTermsPage": {
       "type": "boolean",
       "default": true
     },

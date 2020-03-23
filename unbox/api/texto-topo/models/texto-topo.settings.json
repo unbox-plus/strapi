@@ -19,10 +19,6 @@
     "text": {
       "type": "string"
     },
-    "shop": {
-      "model": "shop",
-      "via": "texto_topo"
-    },
     "shopName": {
       "type": "string"
     }

@@ -39,6 +39,9 @@
     },
     "linkedin": {
       "type": "string"
+    },
+    "ContactUs": {
+      "type": "richtext"
     }
   }
 }

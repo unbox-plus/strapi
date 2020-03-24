@@ -27,7 +27,7 @@
     "vision": {
       "type": "text"
     },
-    "virtue": {
+    "value": {
       "type": "text"
     },
     "shopName": {

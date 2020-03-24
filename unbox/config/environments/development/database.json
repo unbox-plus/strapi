@@ -4,11 +4,21 @@
     "default": {
       "connector": "bookshelf",
       "settings": {
-        "client": "sqlite",
-        "filename": ".tmp/data.db"
+        "client": "postgres",
+        "host": "unbox-cms-strapi-production.cs84di0zifd1.us-east-1.rds.amazonaws.com",
+        "port": "5432",
+        "database": "strapi",
+        "username": "postgres",
+        "password": "c!p3$Y#A$78YcDqk*eMs%mSqKlcC"
       },
       "options": {
-        "useNullAsDefault": true
+    	"pool":{
+          "min": 0,
+          "max": 100,
+          "idleTimeoutMillis": 3000,
+          "createTimeoutMillis": 3000,
+          "acquireTimeoutMillis": 3000
+    	}
       }
     }
   }

@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "categories_sections",
   "info": {
-    "name": "Categories Section"
+    "name": "9. Categorias"
   },
   "options": {
     "increments": true,

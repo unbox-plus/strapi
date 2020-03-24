@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "carousel_tops",
   "info": {
-    "name": "carouselTop"
+    "name": "5. Banners"
   },
   "options": {
     "increments": true,

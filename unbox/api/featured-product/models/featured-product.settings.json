@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "featured_products",
   "info": {
-    "name": "featuredProduct"
+    "name": "a10. Produto em destaque"
   },
   "options": {
     "increments": true,

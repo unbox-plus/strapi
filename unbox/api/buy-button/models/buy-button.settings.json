@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "buy_buttons",
   "info": {
-    "name": "BuyButton"
+    "name": "7. Botão Comprar"
   },
   "options": {
     "increments": true,

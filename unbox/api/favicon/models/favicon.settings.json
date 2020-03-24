@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "favicons",
   "info": {
-    "name": "Favicon"
+    "name": "3. Favicon"
   },
   "options": {
     "increments": true,

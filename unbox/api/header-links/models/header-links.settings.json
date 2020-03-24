@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "header_links",
   "info": {
-    "name": "Header Links"
+    "name": "4. Barra de links "
   },
   "options": {
     "increments": true,

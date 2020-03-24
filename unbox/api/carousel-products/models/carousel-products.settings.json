@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "carousel_products",
   "info": {
-    "name": "CarouselProducts"
+    "name": "6. Título Seção Produtos"
   },
   "options": {
     "increments": true,

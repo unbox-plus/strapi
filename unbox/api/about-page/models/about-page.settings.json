@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "about_pages",
   "info": {
-    "name": "AboutPage"
+    "name": "a13. Página Sobre"
   },
   "options": {
     "increments": true,

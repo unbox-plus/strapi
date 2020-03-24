@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "texto_topos",
   "info": {
-    "name": "Texto Topo"
+    "name": "1. Barra do topo"
   },
   "options": {
     "increments": true,

@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "feedbacks-section",
   "info": {
-    "name": "Feedbacks Section"
+    "name": "a11. Depoimentos"
   },
   "options": {
     "increments": true,

@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "templates",
   "info": {
-    "name": "template"
+    "name": "0. Lojas"
   },
   "options": {
     "increments": true,

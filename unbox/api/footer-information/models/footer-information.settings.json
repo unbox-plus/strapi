@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "footer_informations",
   "info": {
-    "name": "Footer"
+    "name": "a12. Footer"
   },
   "options": {
     "increments": true,

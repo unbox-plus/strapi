@@ -13,25 +13,37 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
     "TeamMember": {
       "type": "component",
       "repeatable": true,
       "component": "componentes.team-member"
     },
-    "mission": {
-      "type": "text"
-    },
-    "vision": {
-      "type": "text"
-    },
-    "value": {
-      "type": "text"
-    },
     "shopName": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "mission": {
+      "type": "richtext"
+    },
+    "vision": {
+      "type": "richtext"
+    },
+    "value": {
+      "type": "richtext"
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTeam": {
+      "type": "boolean",
+      "default": true
+    },
+    "showBrandValues": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

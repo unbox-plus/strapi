@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "components_componentes_categories",
   "info": {
     "name": "Category",
     "icon": "ankh"
@@ -6,18 +8,19 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 20
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     }
-  },
-  "connection": "default",
-  "collectionName": "components_componentes_categories"
+  }
 }

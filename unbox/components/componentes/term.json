@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "components_componentes_terms",
   "info": {
     "name": "term",
     "icon": "handshake"
@@ -6,12 +8,12 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
-  },
-  "connection": "default",
-  "collectionName": "components_componentes_terms"
+  }
 }

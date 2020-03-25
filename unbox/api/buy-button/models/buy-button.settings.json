@@ -11,16 +11,27 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "backgroundColor": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "minLength": 7,
+      "maxLength": 7
     },
     "backgroundHoverColor": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "minLength": 7,
+      "maxLength": 7
     },
     "fontColor": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 7,
+      "minLength": 7
     },
     "path": {
       "type": "string"

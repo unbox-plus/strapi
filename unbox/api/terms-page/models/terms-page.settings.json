@@ -13,10 +13,14 @@
     "term": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.term"
+      "component": "componentes.term",
+      "required": true,
+      "max": 4
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

@@ -11,12 +11,16 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "categories": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.category"
+      "component": "componentes.category",
+      "required": true,
+      "max": 5
     }
   }
 }

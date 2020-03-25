@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "header_links",
   "info": {
-    "name": "4. Barra de links "
+    "name": "4. Cabeçalho"
   },
   "options": {
     "increments": true,
@@ -11,12 +11,15 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "links": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.link"
+      "component": "componentes.link",
+      "max": 8
     }
   }
 }

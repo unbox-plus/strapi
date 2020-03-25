@@ -8,13 +8,14 @@
   "options": {},
   "attributes": {
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     }
   }
 }

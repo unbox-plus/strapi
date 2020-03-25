@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "components_componentes_links",
   "info": {
     "name": "Link",
     "icon": "align-left"
@@ -6,12 +8,13 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": false
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
-  },
-  "connection": "default",
-  "collectionName": "components_componentes_links"
+  }
 }

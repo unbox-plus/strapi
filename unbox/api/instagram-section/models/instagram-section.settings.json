@@ -11,18 +11,24 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 60
     },
     "media": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.instagram"
+      "component": "componentes.instagram",
+      "required": true,
+      "max": 10
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 500
     }
   }
 }

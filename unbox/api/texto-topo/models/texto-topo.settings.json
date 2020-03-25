@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "texto_topos",
   "info": {
-    "name": "1. Barra do topo"
+    "name": "1. Topo"
   },
   "options": {
     "increments": true,
@@ -11,16 +11,29 @@
   },
   "attributes": {
     "backgroundColor": {
-      "type": "string"
+      "type": "string",
+      "default": "#000000",
+      "maxLength": 7,
+      "minLength": 7,
+      "required": true
     },
     "fontColor": {
-      "type": "string"
+      "type": "string",
+      "default": "#ffffff",
+      "required": true,
+      "minLength": 7,
+      "maxLength": 7
     },
     "text": {
-      "type": "string"
+      "type": "string",
+      "default": "Entregas em todo Brasil",
+      "required": true,
+      "maxLength": 45
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

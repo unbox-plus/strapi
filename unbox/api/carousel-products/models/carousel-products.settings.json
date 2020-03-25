@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "carousel_products",
   "info": {
-    "name": "6. Título Seção Produtos"
+    "name": "6. Seção Produtos"
   },
   "options": {
     "increments": true,
@@ -11,13 +11,18 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 60
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "maxLength": 500
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

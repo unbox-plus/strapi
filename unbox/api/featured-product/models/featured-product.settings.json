@@ -11,13 +11,18 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": false,
+      "maxLength": 60
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 500
     },
     "image": {
       "model": "file",
@@ -26,7 +31,8 @@
       "required": false
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

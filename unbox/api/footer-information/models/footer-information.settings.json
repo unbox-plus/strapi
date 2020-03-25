@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "footer_informations",
   "info": {
-    "name": "a12. Footer"
+    "name": "a12. Rodapé"
   },
   "options": {
     "increments": true,
@@ -11,16 +11,25 @@
   },
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 200
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "backgroundColor": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 7,
+      "minLength": 7,
+      "required": true
     },
     "fontColor": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 7,
+      "minLength": 7
     },
     "instagram": {
       "type": "string"
@@ -41,7 +50,8 @@
       "type": "string"
     },
     "ContactUs": {
-      "type": "richtext"
+      "type": "richtext",
+      "maxLength": 500
     }
   }
 }

@@ -19,7 +19,9 @@
       "component": "componentes.team-member"
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "description": {
       "type": "richtext"

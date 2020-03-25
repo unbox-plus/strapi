@@ -11,12 +11,16 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "banners": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.banner"
+      "component": "componentes.banner",
+      "max": 6,
+      "required": true
     }
   }
 }

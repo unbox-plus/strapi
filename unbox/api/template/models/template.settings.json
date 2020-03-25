@@ -20,12 +20,15 @@
       "model": "texto-topo"
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "private": true
     },
     "shopId": {
       "type": "biginteger",
-      "required": true,
-      "unique": true
+      "required": false,
+      "unique": false
     },
     "header_link": {
       "model": "header-links"
@@ -52,10 +55,18 @@
       "model": "feedbacks"
     },
     "primaryColor": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 7,
+      "minLength": 7,
+      "default": "#000000"
     },
     "secondaryColor": {
-      "type": "string"
+      "type": "string",
+      "default": "#ffffff",
+      "maxLength": 7,
+      "minLength": 7,
+      "required": true
     },
     "about_page": {
       "model": "about-page"
@@ -65,44 +76,56 @@
     },
     "ShowTextoTopo": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowCarouselBanner": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowInstagramSection": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowCategoriesSection": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowFeaturedProduct": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowFeedbacksSection": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowAboutPage": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "ShowTermsPage": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": false
     },
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "favicon": {
       "model": "favicon"
     },
     "tertiaryColor": {
-      "type": "string"
+      "type": "string",
+      "maxLength": 7,
+      "minLength": 7
     }
   }
 }

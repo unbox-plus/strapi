@@ -11,13 +11,15 @@
   },
   "attributes": {
     "shopName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "favicon": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "favicon16": {
       "model": "file",
@@ -30,6 +32,9 @@
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "teste": {
+      "type": "string"
     }
   }
 }

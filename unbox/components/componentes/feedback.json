@@ -8,19 +8,24 @@
   "options": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 60
     },
     "text": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true,
+      "maxLength": 500
     },
     "username": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "image": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     }
   }
 }

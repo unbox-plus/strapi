@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "string"
+    }
+  }
+}

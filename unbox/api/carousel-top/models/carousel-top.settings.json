@@ -21,6 +21,11 @@
       "component": "componentes.banner",
       "max": 6,
       "required": true
+    },
+    "bannerMobile": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.banner-mobile"
     }
   }
 }

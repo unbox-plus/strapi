@@ -52,6 +52,9 @@
     "ContactUs": {
       "type": "richtext",
       "maxLength": 500
+    },
+    "whatsapp": {
+      "type": "string"
     }
   }
 }

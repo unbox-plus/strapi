@@ -32,9 +32,6 @@
       "required": true,
       "maxLength": 7,
       "minLength": 7
-    },
-    "path": {
-      "type": "string"
     }
   }
 }

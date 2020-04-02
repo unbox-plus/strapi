@@ -74,46 +74,6 @@
     "terms_page": {
       "model": "terms-page"
     },
-    "ShowTextoTopo": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowCarouselBanner": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowInstagramSection": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowCategoriesSection": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowFeaturedProduct": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowFeedbacksSection": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowAboutPage": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
-    "ShowTermsPage": {
-      "type": "boolean",
-      "default": true,
-      "required": false
-    },
     "shopName": {
       "type": "string",
       "required": true,

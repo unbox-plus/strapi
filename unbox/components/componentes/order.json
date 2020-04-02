@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_orders",
+  "info": {
+    "name": "Order",
+    "icon": "grip-lines"
+  },
+  "options": {},
+  "attributes": {
+    "section": {
+      "type": "string"
+    }
+  }
+}

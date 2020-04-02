@@ -91,6 +91,11 @@
       "type": "component",
       "repeatable": false,
       "component": "componentes.seo"
+    },
+    "Order": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.order"
     }
   }
 }

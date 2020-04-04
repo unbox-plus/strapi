@@ -96,6 +96,9 @@
       "type": "component",
       "repeatable": true,
       "component": "componentes.order"
+    },
+    "backendUrl": {
+      "type": "string"
     }
   }
 }

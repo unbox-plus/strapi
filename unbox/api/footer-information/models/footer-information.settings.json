@@ -12,7 +12,7 @@
   "attributes": {
     "text": {
       "type": "string",
-      "maxLength": 200
+      "maxLength": 300
     },
     "shopName": {
       "type": "string",

@@ -21,6 +21,9 @@
       "component": "componentes.feedback",
       "required": true,
       "max": 4
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

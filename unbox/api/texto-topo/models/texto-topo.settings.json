@@ -28,7 +28,7 @@
       "type": "string",
       "default": "Entregas em todo Brasil",
       "required": true,
-      "maxLength": 45
+      "maxLength": 70
     },
     "shopName": {
       "type": "string",

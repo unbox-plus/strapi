@@ -24,6 +24,11 @@
     },
     "title": {
       "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "maxLength": 7,
+      "minLength": 7
     }
   }
 }

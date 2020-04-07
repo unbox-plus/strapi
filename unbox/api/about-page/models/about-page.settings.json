@@ -46,6 +46,11 @@
     "showBrandValues": {
       "type": "boolean",
       "default": true
+    },
+    "teamBackgroundColor": {
+      "type": "string",
+      "maxLength": 7,
+      "minLength": 7
     }
   }
 }

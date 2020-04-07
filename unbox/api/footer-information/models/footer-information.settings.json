@@ -55,6 +55,11 @@
     },
     "whatsapp": {
       "type": "string"
+    },
+    "backgroundBottom": {
+      "type": "string",
+      "maxLength": 7,
+      "minLength": 7
     }
   }
 }

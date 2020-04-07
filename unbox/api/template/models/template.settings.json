@@ -82,11 +82,6 @@
     "favicon": {
       "model": "favicon"
     },
-    "tertiaryColor": {
-      "type": "string",
-      "maxLength": 7,
-      "minLength": 7
-    },
     "SEO": {
       "type": "component",
       "repeatable": false,

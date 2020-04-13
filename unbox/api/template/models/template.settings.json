@@ -94,6 +94,11 @@
     },
     "backendUrl": {
       "type": "string"
+    },
+    "productsPerPage": {
+      "type": "integer",
+      "max": 50,
+      "min": 1
     }
   }
 }

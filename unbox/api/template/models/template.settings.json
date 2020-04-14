@@ -97,7 +97,7 @@
     },
     "productsPerPage": {
       "type": "integer",
-      "max": 50,
+      "max": 70,
       "min": 1
     }
   }

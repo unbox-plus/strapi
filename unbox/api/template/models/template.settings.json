@@ -95,11 +95,6 @@
     "backendUrl": {
       "type": "string"
     },
-    "productsPerPage": {
-      "type": "integer",
-      "max": 70,
-      "min": 1
-    },
     "productsInHome": {
       "type": "integer",
       "min": 0,

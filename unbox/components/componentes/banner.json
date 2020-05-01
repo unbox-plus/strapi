@@ -15,6 +15,14 @@
     },
     "url": {
       "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "URLExterna",
+        "Categoria",
+        "Produto"
+      ]
     }
   }
 }

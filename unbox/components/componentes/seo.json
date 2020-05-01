@@ -21,6 +21,9 @@
     },
     "pixelId": {
       "type": "string"
+    },
+    "Piio": {
+      "type": "string"
     }
   }
 }

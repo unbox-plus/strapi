@@ -12,6 +12,9 @@
       "via": "related",
       "plugin": "upload",
       "required": true
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

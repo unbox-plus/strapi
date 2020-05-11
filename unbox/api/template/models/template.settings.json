@@ -100,9 +100,8 @@
       "max": 999,
       "min": 0
     },
-    "shopId": {
-      "type": "string",
-      "unique": true
+    "idShop": {
+      "type": "string"
     }
   }
 }

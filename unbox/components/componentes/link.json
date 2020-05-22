@@ -14,7 +14,7 @@
     },
     "path": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "external": {
       "type": "string"

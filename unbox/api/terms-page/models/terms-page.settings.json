@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "terms_pages",
   "info": {
-    "name": "a14. Página Termos"
+    "name": "a15. Página Termos"
   },
   "options": {
     "increments": true,

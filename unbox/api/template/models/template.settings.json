@@ -102,6 +102,9 @@
     },
     "idShop": {
       "type": "string"
+    },
+    "newfeedbacks_section": {
+      "model": "newfeedbacks-section"
     }
   }
 }

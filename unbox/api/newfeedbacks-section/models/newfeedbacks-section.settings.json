@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "newfeedbacks_sections",
+  "info": {
+    "name": "A12. Depoimentos Extras"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "shopName": {
+      "type": "string"
+    },
+    "feedbacks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.feedback-section"
+    }
+  }
+}

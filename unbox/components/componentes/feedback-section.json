@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_feedback_sections",
+  "info": {
+    "name": "FeedbackSection",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "comments": {
+      "type": "component",
+      "repeatable": true,
+      "component": "componentes.feedback"
+    },
+    "title": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

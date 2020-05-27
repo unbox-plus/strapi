@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "components_componentes_featured_products",
+  "info": {
+    "name": "featuredProduct",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "link": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "imageOnLeft": {
+      "type": "boolean"
+    }
+  }
+}

@@ -23,6 +23,11 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "productPageInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "componentes.product-details"
     }
   }
 }

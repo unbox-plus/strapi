@@ -3,7 +3,7 @@
   "connection": "default",
   "collectionName": "footer_informations",
   "info": {
-    "name": "a13. Rodapé"
+    "name": "A14. Rodapé"
   },
   "options": {
     "increments": true,

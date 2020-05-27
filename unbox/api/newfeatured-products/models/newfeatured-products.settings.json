@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "newfeedbacks_sections",
+  "collectionName": "newfeatured_products",
   "info": {
-    "name": "A13. Depoimentos Extras"
+    "name": "A11. Produtos em Destaque Extra"
   },
   "options": {
     "increments": true,
@@ -13,10 +13,10 @@
     "shopName": {
       "type": "string"
     },
-    "feedbacks": {
+    "products": {
       "type": "component",
       "repeatable": true,
-      "component": "componentes.feedback-section"
+      "component": "componentes.featured-product"
     }
   }
 }

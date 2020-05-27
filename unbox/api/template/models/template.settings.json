@@ -103,8 +103,11 @@
     "idShop": {
       "type": "string"
     },
-    "newfeedbacks_section": {
+    "new_feedbacks_section": {
       "model": "newfeedbacks-section"
+    },
+    "new_featured_products": {
+      "model": "newfeatured-products"
     }
   }
 }

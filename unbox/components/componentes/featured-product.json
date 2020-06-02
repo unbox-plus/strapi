@@ -24,6 +24,14 @@
     },
     "imageOnLeft": {
       "type": "boolean"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "URLExterna",
+        "Categoria",
+        "Produto"
+      ]
     }
   }
 }

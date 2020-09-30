@@ -110,7 +110,7 @@
       "model": "newfeatured-products"
     },
     "slug": {
-      "type": "string",
+      "type": "string"
     }
   }
 }

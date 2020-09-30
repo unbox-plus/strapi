@@ -71,7 +71,7 @@
     },
     "shopName": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "favicon": {
@@ -110,7 +110,9 @@
       "model": "newfeatured-products"
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": false
     }
   }
 }

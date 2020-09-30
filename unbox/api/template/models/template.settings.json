@@ -108,6 +108,10 @@
     },
     "new_featured_products": {
       "model": "newfeatured-products"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

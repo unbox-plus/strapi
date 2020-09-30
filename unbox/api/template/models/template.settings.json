@@ -111,7 +111,6 @@
     },
     "slug": {
       "type": "string",
-      "unique": true
     }
   }
 }

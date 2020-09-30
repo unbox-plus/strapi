@@ -112,7 +112,7 @@
     "slug": {
       "type": "string",
       "unique": true,
-      "required": false
+      "required": true
     }
   }
 }
